@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Path to the vents file and output directory
-VENTS_FILE="./inputs/vent_source/vents_East_B.utm"  # Assuming you have a specific vents file for Auckland
-OUTPUT_DIR="./flow_outputs/B/flowB_East"
+VENTS_FILE="./inputs/vent_source/vents_B.utm"  
+OUTPUT_DIR="./flow_outputs/B"
 CSV_CLEANER_SCRIPT="./scripts/convert_to_csv_B.py"
 RASTER_CONVERTER_SCRIPT="./scripts/lava_flow_rasterised_B.py"
 
@@ -41,7 +41,7 @@ while IFS= read -r line; do
   echo "$X $Y" > ./inputs/vents_B.utm
 
   # Run the MOLASSES model and check if it produces an output
-  ./bin/molasses_B.ljc ./inputs/molasses_B_E.conf
+  ./bin/molasses_B.ljc ./inputs/molasses_B.conf
 
   # Check if the flowB0 output file exists
   if [ -f "flowB0" ]; then
