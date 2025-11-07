@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Path to the vents file and output directory
-VENTS_FILE="./inputs/vent_source/vents_East_H.utm"  # Assuming you have a specific vents file for Auckland
-OUTPUT_DIR="./flow_outputs/H/flowH_East"
+VENTS_FILE="./inputs/vent_source/vents_H.utm" 
+OUTPUT_DIR="./flow_outputs/H"
 CSV_CLEANER_SCRIPT="./scripts/convert_to_csv_H.py"
 RASTER_CONVERTER_SCRIPT="./scripts/lava_flow_rasterised_H.py"
 
